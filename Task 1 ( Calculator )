@@ -1,0 +1,25 @@
+First_Number = int(input("Enter First Number: "))
+Second_Number = int(input("Enter Second Number: "))
+Operator = input("Please Enter Operator: ")
+
+if (Operator == "+"):
+    Add = First_Number + Second_Number
+    print(f"Addition: {Add}")
+elif (Operator == "-"):
+    Sub = First_Number - Second_Number
+    print(f"Subraction: {Sub}")
+elif (Operator == "*"):
+    Muliply = First_Number * Second_Number
+    print(f"Mulpitication: {Muliply}")
+elif (Operator == "/"):
+    Division = First_Number / Second_Number
+    print(f"Division: {Division}")
+elif (Operator == "**"):
+    Exponent = First_Number ** Second_Number
+    print(f"Exponent: {Exponent}")
+elif (Operator == "%"):
+    Modulas = First_Number % Second_Number
+    print(f"Modulas: {Modulas}")
+else:
+    print("Please enter correct operator!")
+
