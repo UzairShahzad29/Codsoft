@@ -1,0 +1,17 @@
+#Dice Roll Simulator
+import random
+​
+min = 1
+max = 6
+​
+roll_again = "Yes"
+​
+while roll_again == "Yes" or roll_again == "yes":
+    
+    print("Rolling the Dice...")
+    print("Dice values are...")
+    
+    print(random.randint(min,max))
+    print(random.randint(min,max))
+    
+    roll_again = input("Roll the dice again? ")
