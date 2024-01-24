@@ -1,0 +1,28 @@
+import requests
+import json
+import win32com.client as wincom
+
+city = input("Enter the name of city\n")
+
+url = f"https://api.weatherapi.com/v1/current.json?key=e3ab7fdb35c74e97835102128242401&q={city}"
+
+r = requests.get(url)
+
+w_dic = json.loads(r.text)
+
+celsius = w_dic['current']['temp_c']
+feelslike_c = w_dic['current']['feelslike_c']
+humidity = w_dic['current']['humidity']
+cloduly = w_dic['current']['cloud']
+
+speak = wincom.Dispatch("SAPI.SpVoice")
+
+text = f"""The Current temprature in {city} is {celsius} degree celsius.\n
+temprature feelslikes {feelslike_c} degree celsius.\n
+humidity is {humidity} percent.\n
+clouds are {cloduly} percent.\n
+"""
+
+print(text)
+speak.Speak(text)
+
